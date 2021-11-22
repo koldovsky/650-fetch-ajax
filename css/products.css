@@ -1,3 +1,8 @@
+.selected {
+    font-weight: bold;
+    background-color: aqua;
+}
+
 @media (min-width: 500px) {
     main .products {
         display: grid;

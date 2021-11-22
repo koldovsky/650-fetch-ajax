@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/burger-menu.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="icon" href="img/baby-yoda.svg">
   </head>
   <body>
@@ -24,6 +25,7 @@
             <a href="#products">Products</a>
             <a href="#contacts">Contacts</a>
             <a href="cart.html">Cart</a>
+            <div class="clock"></div>
           </div>
         </div>
       </nav>
@@ -31,179 +33,20 @@
         <h1>Stickerz</h1>
         <button class="button">Shop now</button>
       </div>
+      <div class="carousel container">
+        <button class="prev">🔙</button>
+        <div class="slides-container"></div>
+        <button class="next">➡️</button>
+      </div>
     </header>
     <main class="container">
       <h2 id="products" class="product-header">Products</h2>
-      <div class="products">
-        <article class="product">
-          <img src="img/baby-yoda.svg" alt="Baby Yoda" />
-          <h3>Baby Yoda</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/banana.svg" alt="Banana" />
-          <h3>Banana</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/girl.svg" alt="girl" />
-          <h3>Girl</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/viking.svg" alt="viking" />
-          <h3>Viking</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/baby-yoda.svg" alt="Baby Yoda" />
-          <h3>Baby Yoda</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/banana.svg" alt="Banana" />
-          <h3>Banana</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/girl.svg" alt="girl" />
-          <h3>Girl</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/viking.svg" alt="viking" />
-          <h3>Viking</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/baby-yoda.svg" alt="Baby Yoda" />
-          <h3>Baby Yoda</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/banana.svg" alt="Banana" />
-          <h3>Banana</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/girl.svg" alt="girl" />
-          <h3>Girl</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-        <article class="product">
-          <img src="img/viking.svg" alt="viking" />
-          <h3>Viking</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            expedita obcaecati adipisci explicabo impedit facere est qui
-            voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-            esse numquam dolor nisi!
-          </p>
-          <div class="buttons">
-            <button class="button card-button">Info</button>
-            <button class="button card-button">Buy</button>
-          </div>
-        </article>
-      </div>
+      <button class="button card-button sort-asc">Sort by price up</button>
+      <button class="button card-button sort-desc">Sort by price down</button>
+      <button class="button card-button cat-button cat-large">Large</button>
+      <button class="button card-button cat-button cat-small">Small</button>
+      <button class="button card-button cat-button cat-all selected">All</button>
+      <div class="products"></div>
     </main>
     <footer class="container">
       <h2 id="contacts">Contacts!</h2>
@@ -220,5 +63,8 @@
       </form>
       <p>Some contacts</p>
     </footer>
+    <script src="js/clock.js"></script>
+    <script src="js/product-list.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
