@@ -1,0 +1,7 @@
+{"name":"Jane","email":"jane@example.com"}
+{"name":"Shos ","email":"nepristoyne@gmail.com"}
+{"name":"John","email":"Rambo@gmail.com"}
+{"name":"You are Offer","email":"offerSoftServe@gmail.com"}
+{"name":"Test","email":"gg@gmail.com"}
+{"name":"youroffer","email":"300buks@gmail.com"}
+{"name":"Natalia","email":"ntlna@gmail.com"}

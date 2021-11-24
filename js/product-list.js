@@ -1,54 +1,39 @@
-(function () {
-  const products = [
-    {
-      id: "1",
-      title: "Baby Yoda",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                expedita obcaecati adipisci explicabo impedit facere est qui
-                voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-                esse numquam dolor nisi!`,
-      image: "img/baby-yoda.svg",
-      category: "large",
-      price: 10.99,
-    },
-    {
-      id: "2",
-      title: "Banana",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                expedita obcaecati adipisci explicabo impedit facere est qui
-                voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-                esse numquam dolor nisi!`,
-      image: "img/banana.svg",
-      category: "large",
-      price: 9.99,
-    },
-    {
-      id: "3",
-      title: "Girl",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                expedita obcaecati adipisci explicabo impedit facere est qui
-                voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-                esse numquam dolor nisi!`,
-      image: "img/girl.svg",
-      category: "small",
-      price: 8.99,
-    },
-    {
-      id: "4",
-      title: "Viking",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                expedita obcaecati adipisci explicabo impedit facere est qui
-                voluptate. Fugiat libero molestiae suscipit eaque quae nihil sequi
-                esse numquam dolor nisi!`,
-      image: "img/viking.svg",
-      category: "small",
-      price: 12.99,
-    },
-  ];
-
+(async function () {
   let sortDirection = "ascending";
   let category;
+  let products;
+  let currencyRatio = 1;
 
+  async function refreshProducts() {
+    const response = await fetch('products.json');
+    products = await response.json();
+    renderProducts(products, sortDirection, category);
+  }
+
+  // function refreshProducts() {
+  //   const xhr = new XMLHttpRequest();
+  //   xhr.onreadystatechange = function() {
+  //     if (xhr.readyState === 4 && xhr.status === 200) {
+  //       products = JSON.parse(xhr.responseText);
+  //       renderProducts(products, sortDirection, category);
+  //     }
+  //   }
+  //   xhr.open('GET', 'products.json', true);
+  //   xhr.send();
+  // }
+
+  async function convertCurrency() {
+    const responce = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+    const rates = await responce.json();
+    const convertTo = document.querySelector('.currency').value.toUpperCase();
+    currencyRatio = rates.rates[convertTo];
+    renderProducts(products, sortDirection, category);
+  }
+
+  await refreshProducts();
+
+  // setInterval(refreshProducts, 5000);
+  
   function renderProducts(products, sortDirection, category) {
     const filteredProducts = products.filter((product) => {
       if (category) {
@@ -70,14 +55,12 @@
                 <p>${product.description}</p>
                 <div class="buttons">
                     <button class="button card-button">Info</button>
-                    <button class="button card-button">Buy - ${product.price}</button>
+                    <button class="button card-button">Buy - ${(product.price * currencyRatio).toFixed(2)}</button>
                 </div>
             </article>`;
     }
     productsContainer.innerHTML = html;
   }
-
-  renderProducts(products, sortDirection, category);
 
   const buttonSortAscending = document.querySelector(".sort-asc");
   buttonSortAscending.addEventListener("click", sortAscending);
@@ -121,4 +104,8 @@
     category = null;
     renderProducts(products, sortDirection, category);
   });
+
+  document.querySelector('.refresh-products').addEventListener('click', refreshProducts);
+  document.querySelector('.convert').addEventListener('click', convertCurrency);
+
 })();

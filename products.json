@@ -1,0 +1,35 @@
+[
+    {
+       "id":"1",
+       "title":"Baby Yoda",
+       "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga expedita obcaecati adipisci explicabo",
+       "image":"img/baby-yoda.svg",
+       "category":"large",
+       "price":15.99
+    },
+    {
+       "id":"2",
+       "title":"Banana",
+       "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga expedita obcaecati adipisci explicabo",
+       "image":"img/banana.svg",
+       "category":"large",
+       "price":19.99
+    },
+    {
+       "id":"3",
+       "title":"Girl",
+       "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga expedita obcaecati adipisci explicabo",
+       "image":"img/girl.svg",
+       "category":"small",
+       "price":8.99
+    },
+    {
+       "id":"4",
+       "title":"Viking",
+       "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga expedita obcaecati adipisci explicabo",
+       "image":"img/viking.svg",
+       "category":"small",
+       "price":12.99
+    }
+ ]
+ 

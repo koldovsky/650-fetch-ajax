@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stickerz</title>
+    <title>Stickerz!</title>
     <link rel="stylesheet" href="css/controls.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
@@ -46,11 +46,15 @@
       <button class="button card-button cat-button cat-large">Large</button>
       <button class="button card-button cat-button cat-small">Small</button>
       <button class="button card-button cat-button cat-all selected">All</button>
+      <button class="button card-button refresh-products">Refresh Products</button>
+      <br>
+      <input type="text" value="USD" class="currency">
+      <button class="convert button card-button">Convert</button>
       <div class="products"></div>
     </main>
     <footer class="container">
       <h2 id="contacts">Contacts!</h2>
-      <form action="" method="POST">
+      <form class="contact-form-formspree" action="https://formspree.io/YOUR_ADDRESS" method="POST">
         <label
           >Your name:
           <input type="text" name="user-name" placeholder="User Name" />
@@ -61,10 +65,23 @@
         </label>
         <input type="submit" />
       </form>
-      <p>Some contacts</p>
+      <form class="contact-form-nodejs" action="contact" method="POST">
+        <label
+          >Your name:
+          <input type="text" name="user-name" placeholder="User Name" />
+        </label>
+        <label
+          >Your email:
+          <input type="email" name="user-email" placeholder="User Email" />
+        </label>
+        <input type="submit" />
+      </form>
+      <p class="contact-form-status"></p>
     </footer>
     <script src="js/clock.js"></script>
     <script src="js/product-list.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/contact-form-formspree.js"></script>
   </body>
 </html>
